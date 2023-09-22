@@ -7,160 +7,128 @@
     column-gap: 64px;
 
     padding-top: 24px;
+}
 
+.logo-cap {
+    width: 70px;
+    height: auto;
+}
 
-    .logo-cap {
-        width: 100px;
-        height: auto;
-    }
-    
+.navigation {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.navigation-links {
+    display: flex;
+    align-items: center;
+    column-gap: 48px;
+
+    list-style: none;
+}
+
+.navigation-link {
+    position: relative;
+
+    font-size: 14px;
+    font-weight: 300;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.navigation-link::before {
+    content: '';
+
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+
+    width: 70%;
+    height: 1px;
+    background: var(--red);
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .8s;
+}
+
+.navigation-link:hover {
+    color: var(--red);
+}
+
+.navigation-link:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform .8s;
+}
+
+.navigation-social {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+
+    margin-left: auto;
+}
+
+.navigation-social a {
+    opacity: 0.6;
+    transition: all 0.4s;
+}
+
+.navigation-social a:hover {
+    cursor: pointer;
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+.navigation-social a {
+    width: 20px;
+    height: 20px;
+}
+
+@media(max-width: 900px) {
     .navigation {
-        display: flex;
-        align-items: center;
-        flex: 1;
-    }
-    
-    .navigation-links {
-        display: flex;
-        align-items: center;
-        column-gap: 48px;
-    
-        list-style: none;
-    }
-    
-    .navigation-link {
-        position: relative;
-    
-        font-size: 14px;
-        font-weight: 300;
-        text-decoration: none;
-        letter-spacing: 2px;
-        text-transform: uppercase;
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(10, 12, 16, 0.9);
+        backdrop-filter: blur(2px);
+        z-index: 2;
+
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 70px;
+
+        transform: translateY(-100vh);
+        transition: transform 0.4s;
     }
 
-    .logo-cap {
-        width: 100px;
-        height: auto;
-    }
-    
-    .navigation {
-        display: flex;
-        align-items: center;
-        flex: 1;
-    }
-    
-    .navigation-links {
-        display: flex;
-        align-items: center;
-        column-gap: 48px;
-    
-        list-style: none;
-    }
-    
-    .navigation-link {
-        position: relative;
-    
-        font-size: 14px;
-        font-weight: 300;
-        text-decoration: none;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-    }
-    
-    .navigation-link::before {
-        content: '';
-    
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-    
-        width: 70%;
-        height: 1px;
-        background: var(--red);
-    
-        transform: scaleX(0);
-        transform-origin: right;
-        transform: transform .8s;
-    }
-    
-    .navigation-link:hover {
-        color: var(--red);
-    }
-    
-    .navigation-link:hover::before {
-        transform: scaleX(1);
-        transform-origin: left;
-        transform: transform .8s;
-    }
-    
-    .navigation-social {
-        display: flex;
-        align-items: center;
-        column-gap: 24px;
-    
-        margin-left: auto;
-    }
-    
-    .navigation-social a {
-        opacity: 0.6;
-        transition: all 0.4s;
-    }
-    
-    .navigation-social a:hover {
-        cursor: pointer;
-        opacity: 1;
-        transform: translateY(-5px);
-    }
-    
-    .navigation-social a {
-        width: 20px;
-        height: 20px;
-    }
-    
-    @media(max-width: 900px) {
-        .navigation {
-            position: fixed;
-            inset: 0;
-            width: 100%;
-            height: 100vh;
-            background: rgba(10, 12, 16, 0.9);
-            backdrop-filter: blur(2px);
-            z-index: 2;
-    
-            flex-direction: column;
-            justify-content: center;
-            row-gap: 70px;
-    
-            transform: translateY(-100vh);
-            transition: transform 0.4s;
-        }
-    }
-    
     .navigation.active {
         transform: translateY(0);
     }
-    
+
     .navigation-links {
         flex-direction: column;
         row-gap: 32px;
     }
-    
+
     .navigation-link {
         font-size: 20px;
     }
-    
+
     .navigation-social {
         margin: 0;
     }
-    
-    .navigation-social a {
+
+    .navigation-social a{
         opacity: 0.8;
     }
-    
+
     .navigation-social a {
         width: 24px;
         height: 24px;
     }
-    
 }
-

@@ -7,7 +7,7 @@
 
     <link rel="icon" type="image/x-icon" href="./assets/icon2.ico">
 
-    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/style.css">
   
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;600&display=swap" rel="stylesheet">
@@ -15,104 +15,66 @@
 
 </head>
 <body>
-
     <!--Backgroung video-->
+    <!-- 
     <div class="bg-video">
         <video class="video" autoplay muted loop>
             <source src="assets/background-video.mp4" type="video/mp4">
         </video>
-    </div>
+    </div> 
+    -->
     
     <!--Barra de Navegação-->
-    <div id="app">
-        <header>
-            <img class="logo-cap" src="./assets/3.png" alt="logo fundo preto">
-
-            <div class="navigation">
-                <ul class="navigation-links">
-                    <li>
-                        <a href="#" class="navigation-link">Home</a>
-                    </li>
-                    <li>
-                        <a href="#" class="navigation-link">Portfólio</a>
-                    </li>
-                    <li>
-                        <a href="#" class="navigation-link">Sobre Mim</a>
-                    </li>
-                    <li>
-                        <a href="#" class="navigation-link">Contato</a>
-                    </li>
-                </ul>
-
-                <!--Icones Redes Sociais-->
-                <div class="navigation-social">
-                    <a href="#" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                          <path fill="#EDF1F7" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/>
-                        </svg>
-                      </a>
-                      <a href="#" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                          <path fill="#EDF1F7" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
-                        </svg>
-                      </a>
-                </div>
-            </div>
-
-            <!--Botão-->
-            <button type="button" id="button" onclick="handleClick()" class="button-mobile">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </header>
+    <header class="cabecalho">
+        <img class="cabecalho-imagem" src="./assets/3.png" alt="logo">
+        <nav class="cabecalho-menu">
+            <a class="cabecalho-menu-item" href="#">Home</a>
+            <a class="cabecalho-menu-item" href="#">Sobre Mim</a>
+            <a class="cabecalho-menu-item" href="#">Portfólio</a>
+            <a class="cabecalho-menu-item" href="#">Contato</a>
+        </nav>
 
         <!--Icones Redes Sociais-->
-        <main>
-            <div class="main-info">
-                <img 
-                    data-aos="fade-up"
-                    data-aos-duration="800"
-                    data-aos-easing="ease-in-out"
-                    src="./assets/3.png"
-                />
+        <!--
+        <div class="navigation-social">
+            <a href="#" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path fill="#EDF1F7" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/>
+                </svg>
+              </a>
+              <a href="#" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                  <path fill="#EDF1F7" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+                </svg>
+              </a>
+        </div>
+        -->
 
-                <p
-                    data-aos="fade-up"
-                    data-aos-duration="800"
-                    data-aos-delay="300"
-                    data-aos-easing="ease-in-out"
-                >
-                    Seja Bem-Vindo!
-                </p>
+    </header>
 
-                <div
-                    data-aos="fade-up"
-                    data-aos-duration="800"
-                    data-aos-delay="600"
-                    data-aos-easing="ease-in-out"
-                >
-                    <a href="#" target="_blank">
-                        Ver Portfólio
-                    </a>
-                    <button type="button">Contato</button>
-                </div>
+    <!--Conteúdo-->
+    <main class="conteudo">
+        <section class="conteudo-principal">
+            <div class="conteudo-principal-escrito">
+                <h1 class="conteudo-principal-escrito-titulo">Deborah Maciel - Art Design</h1>
+                <h2 class="conteudo-principal-escrito-subtitulo">Seja Bem-Vindo!</h2>
+                <button class="conteudo-principal-escrito-botao">Meu Portfólio</button>
             </div>
+            <img class="conteudo-principal-imagem" src="./assets/6.png" alt="Imagem Bonequinha">
+        </section>
 
-            <img 
-            data-aos="fade-up"
-            data-aos-duration="800"
-            data-aos-delay="500"
-            data-aos-easing="ease-in-out"
-            src="./assets/05.png" 
-            alt="imagem mesa design">
-        </main>
-    </div>
+        <section class="conteudo-secundario">
+            <h3 class="conteudo-secundario-titulo">O que posso fazer por você?</h3>
+            <p class="conteudo-secundario-paragrafo">Posso criar seu logo.</p>
+            <p class="conteudo-secundario-paragrafo">Posso criar suas postagens do instagram.</p>
+            <p class="conteudo-secundario-paragrafo">Posso criar artes digitais de papelaria e festas.</p>
+            <p class="conteudo-secundario-paragrafo">E muito mais...</p>
+        </section>
+    </main>
 
-    <script src="./index.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    <footer class="rodape">
+        <img class="rodape-imagem" src="./assets/7.png">
+    </footer>
+
 </body>
 </html>
